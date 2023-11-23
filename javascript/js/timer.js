@@ -7,7 +7,11 @@ const clock = document.getElementById("clock");
 
 function getClock(){
     const date = new Date();
-    clock.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
+    clock.innerHTML = `${String(hour).padStart(2,"0")} : ${String(minute).padStart(2,"0")} : ${String(second).padStart(2,"0")}`
+    
 }
 getClock();
 setInterval(getClock, 1000);
