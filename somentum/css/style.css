@@ -1,0 +1,236 @@
+/*배경화면*/
+body {
+    margin: 0; /* body의 기본 마진 제거 */
+    overflow: hidden; /* 스크롤 바 숨김 */
+    
+}
+#Login{
+    position: absolute;top: 80%; left: 27%;
+}
+img {
+    /* 이미지를 화면에 꽉 채우도록 설정 */
+    width: 100vw; /* 뷰포트 너비의 100% */
+    height: 100vh; /* 뷰포트 높이의 100% */
+    background-size: cover;/* 이미지 비율을 유지하면서 요소에 맞게 조정 */
+    position: fixed; /* 이미지를 화면에 고정 */
+    top: 0;
+    left: 0;
+    z-index: -1; /* 다른 요소들보다 뒤로 배치 */
+}
+#name{
+    width: 200px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+input {
+    width: 100px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+
+  .quote{
+    width: 350px;
+    height: 32px;
+    position: absolute;left: 18%;
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 1em;
+    text-size-adjust: auto;
+    color: rgb(219, 228, 236);
+}
+
+.hidden{
+    display: none;
+}
+
+/*리스트*/
+
+
+/*버튼*/
+.custom-btn {
+    outline: none;
+    text-align: center;
+  width: 100px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  background-color : rgb(255,255,255,0.3);
+}
+
+#listToDo{
+    width: 200px;
+    background-color : rgb(255,255,255,0.7);
+    border-radius: 15px;
+
+}
+
+#listLink{
+    width: 200px;
+    background-color : rgb(255,255,255,0.7);
+    border-radius: 15px;
+
+}
+
+/* 1 */
+.btnTodo {
+    position : fixed;
+    top : 93%;
+    left : 93%;
+  transition: all 0.3s ease;
+}
+
+.btnLink {
+    position : fixed;
+    top : 1%;
+    left : 1%;
+  transition: all 0.3s ease;
+}
+.position{
+    position: fixed; top:30%; left: 38%;
+}
+.clock{
+    display: inline-block; /* 인라인 블록 요소로 변경하여 다른 요소와 옆에 나타나게 함 */
+    margin-right: 10px; /* 버튼과의 간격을 설정, 필요에 따라 조정하세요 */
+    text-align: center;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7em;
+    text-size-adjust: auto;
+    color: aliceblue;
+}
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  [type="checkbox"] {
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 2.25em;
+    height: 1.25em;
+  }
+  
+  [type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+  }
+  
+  [type="checkbox"]:checked {
+    background-color: rgb(201, 201, 201);
+    border-color: rgb(201, 201, 201);
+  }
+  
+  [type="checkbox"]:checked::before {
+    background-color: white;
+    left: 1em;
+  }
+  
+  [type="checkbox"]:disabled {
+    border-color: lightgray;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  [type="checkbox"]:disabled:before {
+    background-color: lightgray;
+  }
+  
+  [type="checkbox"]:disabled + span {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  /* Global CSS */
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+
+
+
+#h1{
+    position: fixed;top: 50%; left: 48%;
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 2em;
+    text-size-adjust: auto;
+    color: rgb(219, 228, 236);
+}
+
+.weather{
+    position : fixed;
+    top : 1%;
+    left : 93%;
+    padding: 10px 25px;
+    text-align: center;
+    font-weight: bold;
+    font-family:monospace;
+    font-size: 1em;
+    text-size-adjust: auto;
+    border-radius: 15px;
+    color: rgb(219, 228, 236);
+    background-color : rgb(255,255,255,0.3);
+}
+
+#TODO {
+    position: fixed;
+    top: 12%; /* 상단으로 고정된 위치 */
+    left: 93%;
+    transform: translateY(-100%); /* 위로 숨김 */
+    transition: transform 0.5s ease; /* 부드러운 전환 효과 추가 */
+}
+#LINK{
+    transition: transform 0.5s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.show-list {
+    transform: translateY(0%); /* 아래로 이동하여 표시 */
+}
